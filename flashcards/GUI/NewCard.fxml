@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="349.0" prefWidth="385.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samuelstrobel.flashcards.GUI.NewCardController">
+   <bottom>
+      <BorderPane prefHeight="42.0" prefWidth="372.0" BorderPane.alignment="CENTER">
+         <left>
+            <Button fx:id="bBack" mnemonicParsing="false" onAction="#handleBackButtonClick" text="Back" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button fx:id="bConfirm" mnemonicParsing="false" onAction="#handleConfButtonClick" text="Confirm" BorderPane.alignment="CENTER" />
+         </right>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <center>
+            <Button fx:id="bDelete" mnemonicParsing="false" onAction="#handleDeleteButtoneClick" text="Delete Card" textFill="RED" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </bottom>
+   <left>
+      <VBox prefHeight="327.0" prefWidth="205.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Side one:" />
+            <TextArea fx:id="tSideOne" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Side two:" />
+            <TextArea fx:id="tSideTwo" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Side three:" />
+            <TextArea fx:id="tSideThree" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Side four:" />
+            <TextArea fx:id="tSideFour" prefHeight="200.0" prefWidth="200.0" />
+            <Label text="Side five:" />
+            <TextArea fx:id="tSideFive" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="374.0" prefWidth="179.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Category one:" />
+            <ChoiceBox fx:id="choCatOne" prefWidth="150.0" />
+            <Label fx:id="lDeSelOne" onMouseClicked="#handleDeSelOneClick" text="Deselect Category One" textFill="#0058ff" underline="true" />
+            <Label />
+            <Label text="Category two:" />
+            <ChoiceBox fx:id="choCatTwo" prefWidth="150.0" />
+            <Label fx:id="lDeSelTwo" onMouseClicked="#handleDeSelTwoClick" text="Deselect Category Two" textFill="#0058ff" underline="true" />
+            <Label />
+            <Label text="Category three:" />
+            <ChoiceBox fx:id="choCatThree" prefWidth="150.0" />
+            <Label fx:id="lDeSelThree" onMouseClicked="#handleDeSelThreeClick" text="Deselect Category Three" textFill="#0058ff" underline="true" />
+            <Label />
+            <Label text="Category four:" />
+            <ChoiceBox fx:id="choCatFour" prefWidth="150.0" />
+            <Label fx:id="lDeSelFour" onMouseClicked="#handleDeSelFourClick" text="Deselect Category Four" textFill="#0058ff" underline="true" />
+            <Label />
+            <Label />
+            <CheckBox fx:id="cheFlag" mnemonicParsing="false" text="Flag Card" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>

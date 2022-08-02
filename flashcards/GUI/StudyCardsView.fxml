@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="samuelstrobel.flashcards.GUI.StudyCardsViewController">
+   <center>
+      <ListView fx:id="listCards" prefHeight="281.0" prefWidth="590.0" BorderPane.alignment="CENTER" />
+   </center>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <top>
+      <BorderPane prefHeight="30.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+         <left>
+            <Button fx:id="bBack" mnemonicParsing="false" onAction="#handleBackButtonClick" text="Back" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Button fx:id="bNewCard" mnemonicParsing="false" onAction="#handleNewCardButtonClick" text="New Card" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <Label fx:id="lDeckName" onMouseClicked="#handleTitleClick" text="Label" textFill="#078bff" underline="true" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <CheckBox fx:id="cheEdit" mnemonicParsing="false" text="Edit Mode" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </top>
+   <bottom>
+      <BorderPane prefHeight="43.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+         <right>
+            <Button fx:id="bEditCard" mnemonicParsing="false" onAction="#handleEditCardButtonClick" text="Edit Card" BorderPane.alignment="CENTER" />
+         </right>
+         <left>
+            <StackPane prefHeight="43.0" prefWidth="141.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="129.0" spacing="5.0">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Label text="Sort by side:" />
+                           </children>
+                        </StackPane>
+                        <StackPane>
+                           <children>
+                              <ChoiceBox fx:id="cbSort" prefHeight="25.0" prefWidth="57.0" />
+                           </children>
+                        </StackPane>
+                        <Separator orientation="VERTICAL" prefHeight="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </left>
+         <center>
+            <HBox prefHeight="51.0" prefWidth="396.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox>
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Label text="Category 1" />
+                           </children>
+                        </StackPane>
+                        <StackPane>
+                           <children>
+                              <ChoiceBox fx:id="choCatOne" prefHeight="25.0" prefWidth="69.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Label text="Category 2" />
+                           </children>
+                        </StackPane>
+                        <StackPane>
+                           <children>
+                              <ChoiceBox fx:id="choCatTwo" prefHeight="25.0" prefWidth="69.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Label text="Category 3" />
+                           </children>
+                        </StackPane>
+                        <StackPane>
+                           <children>
+                              <ChoiceBox fx:id="choCatThree" prefHeight="25.0" prefWidth="69.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <StackPane>
+                           <children>
+                              <Label text="Category 4" />
+                           </children>
+                        </StackPane>
+                        <StackPane>
+                           <children>
+                              <ChoiceBox fx:id="choCatFour" prefHeight="25.0" prefWidth="69.0" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <VBox spacing="5.0">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <CheckBox fx:id="cheUnFlag" mnemonicParsing="false" text="Unflagged" />
+                           </children>
+                        </StackPane>
+                        <StackPane>
+                           <children>
+                              <CheckBox fx:id="cheFlag" mnemonicParsing="false" text="Flagged" />
+                           </children>
+                        </StackPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </bottom>
+</BorderPane>
